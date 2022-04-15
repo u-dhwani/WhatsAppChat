@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1090102495006",
+    "project_id": "whatsappchat-63c4b",
+    "storage_bucket": "whatsappchat-63c4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090102495006:android:14bd80b331f82f3db4ab0f",
+        "android_client_info": {
+          "package_name": "com.example.whatsappchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090102495006-i2bonc6pel8qq211jc4d7tgkj8gba12i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvhLf5kIxl6OdVhzn5gBwowvgiSZcNLJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090102495006-i2bonc6pel8qq211jc4d7tgkj8gba12i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/bg_otp_btn.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/bg_receiver.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/bg_sender.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/btn_bg_save.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic__844442_dot_menu_more_vertical_110310.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_facebook.xml" value="0.1415" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_iconfinder_contat_us_1call_4211833_115049.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_left_arrow_svgrepo_com.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_meeting_digital_conference_business_call_camera_video_icon_219324.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_plus_svgrepo_com.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_send_button_icon_icons_com_72565.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_whatsapp.xml" value="0.1415" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/message_bg.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/profile_linear_bg.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/round_shape.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_chat_detailed.xml" value="0.176" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_group_chat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_send_otpactivity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_settings.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_verify_otpactivity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/fragment_chats.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/fragment_status.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/receiver_chat_sample.xml" value="0.6" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/sample_receiver.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/sender_chat_sample.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/show_user.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
