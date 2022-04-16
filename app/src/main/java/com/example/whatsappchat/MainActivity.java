@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
+            case R.id.women_safety:
+                Intent intents=new Intent(MainActivity.this,SafetyActivity.class);
+                startActivity(intents);
+                break;
             case R.id.group_chat:
                 Intent intent=new Intent(MainActivity.this,GroupChatActivity.class);
                 startActivity(intent);
