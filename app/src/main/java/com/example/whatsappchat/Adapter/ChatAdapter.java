@@ -3,17 +3,18 @@ package com.example.whatsappchat.Adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.view.ContentInfo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.whatsappchat.Models.MessageModel;
 import com.example.whatsappchat.R;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -81,9 +82,24 @@ public class ChatAdapter extends  RecyclerView.Adapter{
             }
         });
         if(holder.getClass()==SenderViewHolder.class) {
-            ((SenderViewHolder)holder).senderMsg.setText(messageModel.getMessage());
+            //sending image in chat
+            if(messageModel.getMessage().equals("photo")){
+            ((SenderViewHolder)holder).imgchat.setVisibility(View.VISIBLE);
+            ((SenderViewHolder)holder).senderMsg.setVisibility(View.GONE);
+            Glide.with(context).load(messageModel.getImageurl()).into((ImageView) ((SenderViewHolder) holder).imgchat);
+            }
+
+           ((SenderViewHolder)holder).senderMsg.setText(messageModel.getMessage());
+
         }
         else{
+            //receiving image in chat
+            if(messageModel.getMessage().equals("photo")){
+                ((ReceiverViewHolder)holder).imgrechat.setVisibility(View.VISIBLE);
+                ((ReceiverViewHolder)holder).receiverMsg.setVisibility(View.GONE);
+                Glide.with(context).load(messageModel.getImageurl()).into((ImageView) ((ReceiverViewHolder) holder).imgrechat);
+            }
+
             ((ReceiverViewHolder)holder).receiverMsg.setText(messageModel.getMessage());
         }
     }
@@ -105,18 +121,22 @@ public class ChatAdapter extends  RecyclerView.Adapter{
 
     public  class ReceiverViewHolder extends RecyclerView.ViewHolder{
         TextView receiverMsg,receiverTime;
+        View imgrechat;
         public ReceiverViewHolder(@NonNull View itemView) {
             super(itemView);
+            imgrechat=itemView.findViewById(R.id.imagereceive);
             receiverMsg=itemView.findViewById(R.id.receiverText);
             receiverTime=itemView.findViewById(R.id.receiverTime);
         }
     }
     public class SenderViewHolder extends RecyclerView.ViewHolder{
         TextView senderMsg,senderTime;
+        View imgchat;
         public SenderViewHolder(@NonNull View itemView) {
             super(itemView);
             senderMsg=itemView.findViewById(R.id.senderText);
             senderTime=itemView.findViewById(R.id.senderTime);
+            imgchat=itemView.findViewById(R.id.imagechat);
         }
     }
 }

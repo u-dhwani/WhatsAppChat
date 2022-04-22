@@ -7,35 +7,61 @@
     tools:context=".ChatDetailedActivity"
     android:background="#C5FAC7">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/typemessage"
-            android:layout_width="331dp"
+            android:layout_width="358dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:background="@drawable/message_bg"
             android:ems="10"
             android:hint=" Type your Message..."
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/camerachat"
+            android:layout_width="29dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/typemessage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camera_svgrepo_com" />
+
+        <ImageView
+            android:id="@+id/gallerylink"
+            android:layout_width="26dp"
+            android:layout_height="29dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/camerachat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_attach_svgrepo_com" />
 
         <ImageView
             android:id="@+id/send"
             android:layout_width="35dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_send_button_icon_icons_com_72565" />
+            android:src="@drawable/ic_send_button_icon_icons_com_72565"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typemessage"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"

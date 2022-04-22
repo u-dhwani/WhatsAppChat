@@ -1,7 +1,7 @@
 package com.example.whatsappchat.Models;
 
 public class MessageModel {
-    String uId,message,messageId;
+    String uId,message,messageId,imageurl;
     Long timestamp;
 
     public MessageModel(String uId, String message, Long timestamp) {
@@ -15,6 +15,14 @@ public class MessageModel {
         this.message = message;
     }
     public MessageModel(){}
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
 
     public String getMessageId() {
         return messageId;

@@ -37,8 +37,6 @@ public class SafetyActivity extends AppCompatActivity {
     String x="",y="";
     private static final int REQUEST_LOCATION=1;
     LocationManager locationManager;
-    Intent mIntent;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_safety);
@@ -61,18 +59,18 @@ public class SafetyActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
-       emergency.setOnLongClickListener(new View.OnLongClickListener() {
+       emergency.setOnClickListener(new View.OnClickListener() {
            @Override
-           public boolean onLongClick(View view) {
+           public void onClick(View view) {
                mp.start();
                Toast.makeText(getApplicationContext(), "PANIC BUTTON STARTED", Toast.LENGTH_SHORT).show();
                loadData();
-               return false;
+
            }
        });
     }
     private void loadData(){
-        ArrayList<String> thelist=new ArrayList<>();
+        ArrayList<String> list=new ArrayList<>();
         Cursor data=mydb.getListContents();
         if(data.getCount()==0){
             Toast.makeText(this, "No Content To Show", Toast.LENGTH_SHORT).show();
@@ -81,11 +79,11 @@ public class SafetyActivity extends AppCompatActivity {
             String msg="I NEED HELP AT THIS LOCATION (LATITUDE):"+ x +"(LONGITUDE): "+y;
             String number="";
             while(data.moveToNext()){
-                thelist.add(data.getString(1));
+                list.add(data.getString(1));
                 number=number+data.getString(1)+(data.isLast()?"":";");
                 call();
             }
-            if(!thelist.isEmpty()){
+            if(!list.isEmpty()){
                 sendSms(number,msg,true);
             }
         }
@@ -119,7 +117,8 @@ public class SafetyActivity extends AppCompatActivity {
                 double longi=locationGPS.getLongitude();
                 x=String.valueOf(lat);
                 y=String.valueOf(longi);
-            }else{
+            }
+        else{
                 Toast.makeText(this,"Unable To Find Location",Toast.LENGTH_SHORT).show();
             }
         }
