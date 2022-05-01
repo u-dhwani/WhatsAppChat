@@ -1,9 +1,12 @@
 package com.example.whatsappchat.Models;
 
+import android.text.Editable;
+
 public class Users {
+    String phone;
     String profilepic,userName,mail,password,userId,lastMessage,status;
 
-    public Users(String profilepic, String userName, String mail, String password, String userId, String lastMessage,String status) {
+    public Users(String profilepic, String userName, String mail, String password, String userId, String lastMessage, String status, String phone) {
         this.profilepic = profilepic;
         this.userName = userName;
         this.mail = mail;
@@ -11,16 +14,28 @@ public class Users {
         this.userId = userId;
         this.lastMessage = lastMessage;
         this.status=status;
+        this.phone=phone;
     }
     public  Users()
     {
 
     }
     //SignUp Constructor
-    public Users( String userName, String mail, String password) {
+    public Users( String userName, String mail,String phone,String password) {
         this.userName = userName;
         this.mail = mail;
+        this.phone=phone;
         this.password = password;
+
+    }
+
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getStatus() {

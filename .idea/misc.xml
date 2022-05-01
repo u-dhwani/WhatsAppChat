@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/background_search.xml" value="0.2245" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/bg_otp_btn.xml" value="0.1575" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/bg_receiver.xml" value="0.158" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/bg_sender.xml" value="0.158" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/btn_bg_save.xml" value="0.1575" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic__844442_dot_menu_more_vertical_110310.xml" value="0.158" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_attach_svgrepo_com.xml" value="0.1575" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_call.xml" value="0.141" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_camera_svgrepo_com.xml" value="0.1575" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_facebook.xml" value="0.1415" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/ic_iconfinder_contat_us_1call_4211833_115049.xml" value="0.158" />
@@ -22,8 +24,10 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/message_bg.xml" value="0.158" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/profile_linear_bg.xml" value="0.1575" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/round_shape.xml" value="0.158" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/drawable/video.xml" value="0.2245" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_call_audio.xml" value="0.264" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_calls_dashboard.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_chat_detailed.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_chat_detailed.xml" value="0.264" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_group_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
@@ -33,6 +37,7 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_verify_otpactivity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_video.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/activity_x.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/fragment_calls.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/layout/fragment_chats.xml" value="0.25416666666666665" />
@@ -44,6 +49,7 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/menu/callmenu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/WhatsAppChat/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -5,9 +5,28 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+    -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_send_button_icon_icons_com_72565" />
+    <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+         notification message. See README(https://goo.gl/6BKBk7) for more.
+    -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorPrimary" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +35,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsAppChat">
+        <activity
+            android:name=".VideoActivity"
+            android:exported="false" />
         <activity
             android:name=".CallsDashboardActivity"
             android:exported="false" />

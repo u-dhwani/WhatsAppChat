@@ -6,8 +6,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.whatsappchat.Fragments.CallsFragment;
 import com.example.whatsappchat.Fragments.ChatsFragment;
-import com.example.whatsappchat.Fragments.StatusFragment;
-
 public class FragmentsAdapter extends FragmentPagerAdapter {
     public FragmentsAdapter(@NonNull FragmentManager fm) {
         super(fm);
@@ -16,25 +14,18 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch(position){
-            case 0:return new ChatsFragment();
-            case 1:return new StatusFragment();
-            case 2:return new CallsFragment();
+        switch (position) {
             default:return new ChatsFragment();
         }
-
     }
     @Override
     public int getCount() {
-        return 3;
+        return 1;
     }
     public CharSequence getPageTitle(int position){
         String title=null;
         if(position==0){
-            title="CHATS";
-        }
-        if(position==1){
-            title="STATUS";
+            title="CHATS                                                        CALLS";
         }
         if(position==2){
             title="CALLS";

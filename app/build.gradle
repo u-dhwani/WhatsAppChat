@@ -30,8 +30,10 @@ android {
 }
 dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.firebase:firebase-firestore:24.1.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-    //implementation ('org.jitsi.react:jitsi-meet-sdk:3.+') { transitive = true }
+    implementation 'com.google.firebase:firebase-messaging'
+   // implementation ('org.jitsi.react:jitsi-meet-sdk:5.0.2') { transitive = true }
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.google.android.gms:play-services-location:19.0.1'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -39,15 +41,18 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'com.google.firebase:firebase-auth:21.0.3'
     implementation platform('com.google.firebase:firebase-bom:29.3.0')
+  //  implementation 'com.yqritc:android-scalablevideoview:1.0.4'
+  //  implementation 'com.facebook.react:react-native-video:5.1.1-jitsi-8462683'
     implementation 'com.google.firebase:firebase-database:20.0.4'
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-storage:20.0.1'
     implementation 'androidx.compose.runtime:runtime:1.0.0-rc01'
-    // implementation 'com.yqritc:android-scalablevideoview:1.0.4'
-    //implementation ' com.facebook.react:react-native-video:+'//5.1.1-jitsi-8255293'
-    testImplementation 'junit:junit:4.13.2'
+
+    //implementation 'com.github.AgoraID-Community.Android-UIKit:final:v2.0.6'
+
+   testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     //implementation 'com.github.MatrixFrog:Android-ScalableVideoView:v1.0.4-jitpack'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'

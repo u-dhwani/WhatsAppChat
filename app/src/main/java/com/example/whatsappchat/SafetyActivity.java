@@ -1,5 +1,4 @@
 package com.example.whatsappchat;
-
 import static android.Manifest.permission.CALL_PHONE;
 
 import androidx.appcompat.app.AlertDialog;
@@ -19,6 +18,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -27,7 +27,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationSettingsRequest;
 
 import java.util.ArrayList;
-
+import java.util.List;
 public class SafetyActivity extends AppCompatActivity {
     Button addcontact,emergency;
     private FusedLocationProviderClient client;
@@ -51,7 +51,6 @@ public class SafetyActivity extends AppCompatActivity {
         } else {
             startTracking();
         }
-
         addcontact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,49 +80,81 @@ public class SafetyActivity extends AppCompatActivity {
             while(data.moveToNext()){
                 list.add(data.getString(1));
                 number=number+data.getString(1)+(data.isLast()?"":";");
+               // number=data.getString(1);
+             //   if(!list.isEmpty()){
+                sendSms(number,msg,true);
+               // }
                 call();
             }
-            if(!list.isEmpty()){
-                sendSms(number,msg,true);
-            }
+
         }
     }
     private void sendSms(String number,String msg,boolean b){
-        Intent smsIntent=new Intent(Intent.ACTION_SENDTO);
+       /* Intent smsIntent=new Intent(Intent.ACTION_VIEW);
         Uri.parse("smsto:"+number);
         smsIntent.putExtra("smsbody",msg);
-        startActivity(smsIntent);
+        smsIntent.setType("vnd.android-dir/mms-sms");
+        startActivity(smsIntent);*/
+        try {
+            SmsManager smsManager= SmsManager.getDefault();
+            smsManager.sendTextMessage(number,null,msg,null,null);
+            Toast.makeText(getApplicationContext(),"Message Sent",Toast.LENGTH_LONG).show();
+        }catch (Exception e)
+        {
+            Toast.makeText(getApplicationContext(),"Some fields is Empty",Toast.LENGTH_LONG).show();
+        }
     }
     private void call(){
         Intent i=new Intent(Intent.ACTION_CALL);
         i.setData(Uri.parse("tel:1000"));
         if(ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE )== PackageManager.PERMISSION_GRANTED){
-            startActivity(i);
-        }
+        startActivity(i);
+    }
         else{
-            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
-                requestPermissions(new String[]{CALL_PHONE},1);
-            }
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
+            requestPermissions(new String[]{CALL_PHONE},1);
         }
     }
+}
     private void startTracking(){
         if(ActivityCompat.checkSelfPermission(SafetyActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
                 SafetyActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_LOCATION);
         }else{
-            Location locationGPS=locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location locationGPS=getLastKnownLocation();
+                  //  locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if(locationGPS!=null){
                 double lat=locationGPS.getLatitude();
                 double longi=locationGPS.getLongitude();
                 x=String.valueOf(lat);
                 y=String.valueOf(longi);
+             // loadData();
             }
         else{
                 Toast.makeText(this,"Unable To Find Location",Toast.LENGTH_SHORT).show();
             }
+        }}
+        private Location getLastKnownLocation() {
+            LocationManager mLocationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+            List<String> providers = mLocationManager.getProviders(true);
+            Location bestLocation = null;
+            for (String provider : providers) {
+                if(ActivityCompat.checkSelfPermission(SafetyActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                        SafetyActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_LOCATION);
+                }
+                Location l = mLocationManager.getLastKnownLocation(provider);
+                if (l == null) {
+                    continue;
+                }
+                if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
+                    // Found best last known location: %s", l);
+                    bestLocation = l;
+                }
+            }
+            return bestLocation;
         }
 
-    }
     private void onGPS(){
         final AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setMessage("Enable GPS").setCancelable(false).setPositiveButton("yes", new DialogInterface.OnClickListener() {

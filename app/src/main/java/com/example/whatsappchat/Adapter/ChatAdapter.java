@@ -18,7 +18,9 @@ import com.example.whatsappchat.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ChatAdapter extends  RecyclerView.Adapter{
     ArrayList<MessageModel> messageModels;
@@ -38,6 +40,9 @@ public class ChatAdapter extends  RecyclerView.Adapter{
         this.messageModels = messageModels;
         this.context = context;
         this.recId = recId;
+    }
+
+    public ChatAdapter(ArrayList<MessageModel> messageModels, View.OnClickListener onClickListener, String receiveId) {
     }
 
     @NonNull
@@ -86,10 +91,20 @@ public class ChatAdapter extends  RecyclerView.Adapter{
             if(messageModel.getMessage().equals("photo")){
             ((SenderViewHolder)holder).imgchat.setVisibility(View.VISIBLE);
             ((SenderViewHolder)holder).senderMsg.setVisibility(View.GONE);
-            Glide.with(context).load(messageModel.getImageurl()).into((ImageView) ((SenderViewHolder) holder).imgchat);
+            Glide.with(context).load(messageModel.getImageurl())
+                    .placeholder(R.drawable.imageplaceholder)
+                    .into((ImageView) ((SenderViewHolder) holder).imgchat);
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            String currentDateandTime = sdf.format(new Date());
+            ((SenderViewHolder)holder).senderTime.setText(currentDateandTime);
             }
 
            ((SenderViewHolder)holder).senderMsg.setText(messageModel.getMessage());
+          //  SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+
+            String currentDateandTime = sdf.format(new Date());
+            ((SenderViewHolder)holder).senderTime.setText(currentDateandTime);
 
         }
         else{
@@ -97,7 +112,9 @@ public class ChatAdapter extends  RecyclerView.Adapter{
             if(messageModel.getMessage().equals("photo")){
                 ((ReceiverViewHolder)holder).imgrechat.setVisibility(View.VISIBLE);
                 ((ReceiverViewHolder)holder).receiverMsg.setVisibility(View.GONE);
-                Glide.with(context).load(messageModel.getImageurl()).into((ImageView) ((ReceiverViewHolder) holder).imgrechat);
+                Glide.with(context).load(messageModel.getImageurl())
+                        .placeholder(R.drawable.imageplaceholder)
+                        .into((ImageView) ((ReceiverViewHolder) holder).imgrechat);
             }
 
             ((ReceiverViewHolder)holder).receiverMsg.setText(messageModel.getMessage());
@@ -139,4 +156,5 @@ public class ChatAdapter extends  RecyclerView.Adapter{
             imgchat=itemView.findViewById(R.id.imagechat);
         }
     }
+
 }
